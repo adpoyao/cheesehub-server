@@ -48,7 +48,7 @@ app.get('/api/cheeses', (req, res) => {
 
 app.post('/api/cheeses', jsonParser, (req, res) => {
 	cheeses.push(req.body.cheese);
-	res.send('Posted.');
+	res.sendStatus(201);
 });
 
 function runServer(port = PORT) {
